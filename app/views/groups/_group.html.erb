@@ -1,0 +1,33 @@
+<div id="<%= dom_id group %>">
+  <p style="color:red;">
+    <strong>Name:</strong>
+    <%= group.name %>
+  </p>
+
+  <p>
+    <strong>Type group:</strong>
+    <div class=" col-5">
+      <select class="form-select col-3" aria-label="Default select example">
+        <option selected>Pop</option>
+        <option value="1">Rock</option>
+        <option value="2">Heavy Metal</option>
+        <option value="3">Jazz</option>
+      </select>
+    </div>
+  </p>
+
+  <p>
+    <strong>Debut date:</strong>
+    <%= group.debut_date %>
+  </p>
+
+  <p>
+    <strong>Crew:</strong>
+    <%= group.crew %>
+  </p>
+  
+  <% group.concerts.each do |concert| %>
+    <li><%= concert.place %>, <%= concert.attendance %> Asistentes, <%= concert.concert_date %></li>
+  <% end %>
+  <br>
+</div>

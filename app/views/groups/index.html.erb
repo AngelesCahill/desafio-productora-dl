@@ -1,0 +1,25 @@
+<p style="color: green"><%= notice %></p>
+<%= link_to "New group", new_group_path %>
+<%= link_to "New concert", new_concert_path %>
+<h1>Groups</h1>
+
+<div id="groups" class="row mx-5">
+    <% @groups.each do |group| %>
+      <div class="card mx-3 my-3" style="width: 18rem;">
+    <div class="card-body">
+        <%= render group %>
+        <br>
+         <p>
+          <strong>cantidad de conciertos este mes:</strong>
+          <%= group.concerts_this_month %>
+        </p>
+        <p>
+          <%= link_to "Show this group", group %>
+        </p>
+      </div>
+    </div>
+    <% end %>
+</div>
+
+
+

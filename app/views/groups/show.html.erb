@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @group %>
+<strong>cantidad de conciertos este mes:</strong>
+<%= @group.concerts_this_month %>
+<br>
+<div>
+<br>
+  <%= link_to "Edit this group", edit_group_path(@group) %> |
+  <%= link_to "Back to groups", groups_path %> |
+  <%= link_to "Go to concert", new_concert_path %><br>
+<br>
+  <%= button_to "Destroy this group", @group, method: :delete %>
+</div>

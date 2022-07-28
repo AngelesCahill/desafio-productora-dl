@@ -1,0 +1,26 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Concerts</h1>
+
+<div id="concerts">
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Lugar</th>
+      <th scope="col">Duración</th>
+      <th scope="col">Fecha</th>
+      <th scope="col">Asistentes</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+          <% @concerts.each do |concert| %>
+            <%= render concert %>
+            
+          <% end %>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<%= link_to "New concert", new_concert_path %> |
+<%= link_to "Back to groups", groups_path %>
